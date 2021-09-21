@@ -84,13 +84,10 @@ def showing(similarity_list):
 
 if __name__ == '__main__':
     collection_of_texts = []
-    print('stge1')
     list_of_episodes = collecting()
     for episode in list_of_episodes:
         preproccess(episode, 0)
-    print('stge2')
     vectors = indexing(collection_of_texts)
-    print('stge3')
     value = get_request()
     showing(searching(vectors, index_request(value)))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
